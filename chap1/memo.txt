@@ -1,0 +1,39 @@
+
+有名なライブラリのPython3への対応状況
+http://python3wos.appspot.com/
+
+Python 3.8.1
+
+インストール時にﾊパスを通すにチェックを入れる
+（v2の場合は自分で環境変数にパスを通す）
+
+コマンドプロンプトで
+python
+で
+>>>
+になる
+
+テスト：
+print('Hello, World')
+
+抜けるには、
+exit()
+
+直接打ち込まなくても、test.pyファイルに保存してDOS窓にD&Dでも可
+
+IDLEという標準で用意されている開発環境を使う事も出来る
+ファイル名を指定して実行で「IDLE」
+
+エディタは本ではAtomを使用
+UTF-8で保存する
+
+import calendar 
+print(calendar.month(2020,12)) 
+↑
+直接実行だと動くが、.pyファイルだと動かない？
+
+
+Pythonのコーディング規約：
+■PEP8日本語訳（Python Enhancement Proposals：Pythonをよりよくする提案集）
+https://pep8-ja.readthedocs.io/ja/latest/
+
