@@ -1,0 +1,12 @@
+pythonではインデントが重要なので注意：
+
+def happy():
+    print('life')
+↑ok
+
+def happy():
+print('life')
+↑エラー
+
+pythonでの加算乗除算
+

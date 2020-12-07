@@ -1,0 +1,2 @@
+﻿def happy():
+    print('life')
