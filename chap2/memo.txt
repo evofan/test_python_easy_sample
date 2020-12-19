@@ -17,3 +17,28 @@ pythonでの加算乗除算
 j又はJを使って複素数の計算も可能
 
 2-3 変数
+>>> tax = 0.08
+>>> price=120
+>>> tel='01203456789'
+>>>
+0.08
+>>> price
+120
+>>> tel
+'01203456789'
+>>> price * tax
+9.6
+>>> 120*0.8
+96.0
+>>> 120*0.08
+9.6
+
+変数名の規則
+・先頭に数字は使えない
+・予約語（Trueやclass等）は使えない
+>>> import keyword
+>>> keyword.kwlist
+['False', 'None', 'True', 'and', 'as', 'assert', 'async', 'await', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']
+>>>
+
+2-4 比較演算子
