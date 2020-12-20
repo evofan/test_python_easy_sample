@@ -1,22 +1,22 @@
-python‚Å‚ÍƒCƒ“ƒfƒ“ƒg‚ªd—v‚È‚Ì‚Å’ˆÓF
+ï»¿pythonã§ã¯ã‚¤ãƒ³ãƒ‡ãƒ³ãƒˆãŒé‡è¦ãªã®ã§æ³¨æ„ï¼š
 
 def happy():
     print('life')
-ªok
+â†‘ok
 
 def happy():
 print('life')
-ªƒGƒ‰[
+â†‘ã‚¨ãƒ©ãƒ¼
 
-python‚Å‚Ì‰ÁŽZæœŽZ
+pythonã§ã®åŠ ç®—ä¹—é™¤ç®—
 
-Žl‘¥‰‰ŽZA+-*/
-è—]A%
-‚×‚«æA**
+å››å‰‡æ¼”ç®—ã€+-*/
+å‰°ä½™ã€%
+ã¹ãä¹—ã€**
 
-j–”‚ÍJ‚ðŽg‚Á‚Ä•¡‘f”‚ÌŒvŽZ‚à‰Â”\
+jåˆã¯Jã‚’ä½¿ã£ã¦è¤‡ç´ æ•°ã®è¨ˆç®—ã‚‚å¯èƒ½
 
-2-3 •Ï”
+2-3 å¤‰æ•°
 >>> tax = 0.08
 >>> price=120
 >>> tel='01203456789'
@@ -33,12 +33,28 @@ j–”‚ÍJ‚ðŽg‚Á‚Ä•¡‘f”‚ÌŒvŽZ‚à‰Â”\
 >>> 120*0.08
 9.6
 
-•Ï”–¼‚Ì‹K‘¥
-Eæ“ª‚É”Žš‚ÍŽg‚¦‚È‚¢
-E—\–ñŒêiTrue‚âclass“™j‚ÍŽg‚¦‚È‚¢
+å¤‰æ•°åã®è¦å‰‡
+ãƒ»å…ˆé ­ã«æ•°å­—ã¯ä½¿ãˆãªã„
+ãƒ»äºˆç´„èªžï¼ˆTrueã‚„classç­‰ï¼‰ã¯ä½¿ãˆãªã„
 >>> import keyword
 >>> keyword.kwlist
 ['False', 'None', 'True', 'and', 'as', 'assert', 'async', 'await', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']
 >>>
 
-2-4 ”äŠr‰‰ŽZŽq
+2-4 æ¯”è¼ƒæ¼”ç®—å­
+>>> 34 > 22
+True
+>>> 34<22
+False
+>>>
+
+>
+>=
+<
+<=
+==
+!=
+ã»ã¼JSã¨åŒã˜
+
+2-5 ãƒ‡ãƒ¼ã‚¿ã®ç¨®é¡ž
+
