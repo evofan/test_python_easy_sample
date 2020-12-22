@@ -93,5 +93,38 @@ False
 ... '''
 '\nSunday\nMonday\nTuesday\n'
 
+文字列の連結
+>>> 'thunder' + 'bolt'
+'thunderbolt'
+>>>
+
+>>> 'hunter' * 2
+'hunterhunter'
+>>>
+
+大文字に変換、小文字に変換
+>>> text = 'hello'
+>>> text.upper()
+'HELLO'
+>>> text.lower()
+'hello'
+>>>
+
+指定した文字数を数える
+>>> text = 'maintenance'
+>>> text.count('n')
+3
+>>>
+
+論理（ブール）型
+>>> 46 < 64
+True
+>>> 46 > 64
+False
+>>>
+※pythonでは先頭が大文字なので注意
+
+
+
 
 
