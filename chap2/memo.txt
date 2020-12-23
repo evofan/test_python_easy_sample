@@ -125,6 +125,39 @@ False
 ※pythonでは先頭が大文字なので注意
 
 
+リスト型、※配列とは別？
+複数のデータを1まとまり（リスト）に出来る
+>>> Agroup = ['kazu', 'gorou']
+>>> Bgroup = ['shun', 'haruka']
+>>>
+
+リストに要素を追加
+>>> Agroup.append('dai')
+>>> Agroup
+['kazu', 'gorou', 'dai']
+>>>
+
+リストから要素を削除する
+>>> Agroup.remove('kazu')
+>>> Agroup
+['gorou', 'dai']
+>>>
+
+リスト内の要素を並び替える
+>>> Agroup
+['dai', 'gorou']
+>>>
+
+>>> Cgroup = [87,55,99,50,66,78]
+>>> Cgroup
+[87, 55, 99, 50, 66, 78]
+>>> Cgroup.sort()
+>>> Cgroup
+[50, 55, 66, 78, 87, 99]
+>>>
+
+
+
 
 
 
