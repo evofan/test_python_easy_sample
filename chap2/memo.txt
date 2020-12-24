@@ -125,7 +125,7 @@ False
 ※pythonでは先頭が大文字なので注意
 
 
-リスト型、※配列とは別？
+■リスト型、※配列とは別？
 複数のデータを1まとまり（リスト）に出来る
 >>> Agroup = ['kazu', 'gorou']
 >>> Bgroup = ['shun', 'haruka']
@@ -155,6 +155,25 @@ False
 >>> Cgroup
 [50, 55, 66, 78, 87, 99]
 >>>
+
+
+■辞書型（ディクショナリ）、※JSの連想配列？
+キーと値をセットで格納する
+>>> activities = { 'Monday': 'バスケ', 'Tuesday': '自転車', 'Wednesday': '軽音', 'Friday': '水泳'}
+>>> activities
+{'Monday': 'バスケ', 'Tuesday': '自転車', 'Wednesday': '軽音', 'Friday': '水泳'}
+>>> activities['Friday']
+'水泳'
+>>>
+
+辞書型のメソッド
+>>> activities.keys()
+dict_keys(['Monday', 'Tuesday', 'Wednesday', 'Friday'])
+>>> activities.values()
+dict_values(['バスケ', '自転車', '軽音', '水泳'])
+>>>
+
+
 
 
 
