@@ -173,6 +173,35 @@ dict_keys(['Monday', 'Tuesday', 'Wednesday', 'Friday'])
 dict_values(['バスケ', '自転車', '軽音', '水泳'])
 >>>
 
+■タプル型
+タプル＝複数の要素からなる一組、二重：ダブル、三重：トリプル、四重：タプル、五重：タプル、…
+書式：
+(要素A, 要素B, 要素C, .....)
+>>> tuple_sample = ('apple', 3, 90.4)
+>>> print(tuple_sample)
+('apple', 3, 90.4)
+>>>
+
+①タプルはリストと違って、定義後に要素の変更が出来ない
+
+リスト：
+>>> flavor_list = ['ミント', 'チョコ', 'ストロベリー', 'バニラ']
+>>> flavor_list[0] = 'レーズン'
+>>> flavor_list
+['レーズン', 'チョコ', 'ストロベリー', 'バニラ']
+>>>
+
+タプル：
+>>> flavor_tuple = ('ミント', 'チョコ', 'ストロベリー', 'バニラ')
+>>> flavor_tuple[0] = 'レーズン'
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'tuple' object does not support item assignment
+>>> flavor_tuple
+('ミント', 'チョコ', 'ストロベリー', 'バニラ')
+>>>
+
+②タプル型は、辞書のキーとして使えるが、リスト型は使えない
 
 
 
