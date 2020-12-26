@@ -202,10 +202,36 @@ TypeError: 'tuple' object does not support item assignment
 >>>
 
 ②タプル型は、辞書のキーとして使えるが、リスト型は使えない
+>>> diary = {}
+>>> key = ('kamata', '08-01')
+>>> diary[key] = '70kg'
+>>> print(diary)
+{('kamata', '08-01'): '70kg'}
+>>>
 
+>>> diary = {}
+>>> key = ['nakata', '08-01']
+>>> diary[key] = '50kg'
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: unhashable type: 'list'
+>>>
 
+■集合型（セット）
+リストやタプルと同様に複数のデータを1つにまとめる事が出来る型
+辞書型と同じ{}を使い、リスト型やタプル型と同様に要素を並べて定義
+>>> candy = {'delicious', 'fantastic'}
+>>> print(candy)
+{'delicious', 'fantastic'}
+>>>
 
-
-
+set()を使って集合型を定義出来る
+>>> candy2 = set('delicious')
+>>> print(candy2)
+{'o', 'e', 'u', 'd', 'c', 's', 'l', 'i'}
+>>>
+・1つずつバラバラになる
+・順番も保存されないのでバラバラになる
+・重複（今回だと'i'）は持たないので1つになる
 
 
