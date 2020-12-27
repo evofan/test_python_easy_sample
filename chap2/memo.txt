@@ -234,4 +234,34 @@ set()を使って集合型を定義出来る
 ・順番も保存されないのでバラバラになる
 ・重複（今回だと'i'）は持たないので1つになる
 
+リスト型を使ってから、set()を使って集合型を定義
+>>> flavor = ['apple', 'peach', 'soda']
+>>> candy = set(flavor)
+>>> candy
+{'soda', 'peach', 'apple'}
+>>> candy.update(['grape']) ★リスト型として渡す
+>>> candy
+{'soda', 'peach', 'apple', 'grape'}
+>>>
 
+□集合型の使い方①重複を削除する
+pythonでデータを扱う時は主にリスト型を使うが、重複するデータを除きたい場合、
+一旦集合型に変換し、重複データを除いた後にリスト型に変換する
+>>> flavor = ['apple', 'soda', 'chocolate', 'apple', 'grape', 'grape', 'peach', 'soda']
+>>> flavor_set = set(flavor)
+>>> print(flavor_set)
+{'chocolate', 'peach', 'grape', 'soda', 'apple'}
+>>> flavor = list(flavor_set)
+>>> print(flavor)
+['chocolate', 'peach', 'grape', 'soda', 'apple']
+>>>
+
+□集合型の使い方②複数のデータ同士の計算
+>>>
+>>> flavor_set_A = {'apple', 'peach', 'soda'}
+>>> flavor_set_B = {'apple', 'soda', 'chocolate'}
+>>> flavor_set_A - flavor_set_B ★flavor_set_AからBとの共通のデータを除いた結果を表示する
+{'peach'}
+>>> flavor_set_A & flavor_set_B ★flavor_set_AとBの共通のデータを表示する
+{'soda', 'apple'}
+>>>
