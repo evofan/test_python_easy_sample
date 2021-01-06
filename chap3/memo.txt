@@ -65,4 +65,23 @@ else～ifを追加
 いつもありがとうございます。今回は1000円です
 >>>
 
+複数の条件分岐を入れ子でなくまとめて記述
+>>> pointcard = True
+>>> count = 5
+>>> (pointcard = True)
+  File "<stdin>", line 1
+    (pointcard = True)
+               ^
+SyntaxError: invalid syntax
+>>> (pointcard == True)
+True
+>>> (count == 5)
+True
+>>> ((pointcard == True) and (count == 5))
+True
+>>>
+
+片方がFalseの場合
+>>> ((pointcard == True) and (count == 7))
+False
 
