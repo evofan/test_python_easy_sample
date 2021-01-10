@@ -85,3 +85,27 @@ True
 >>> ((pointcard == True) and (count == 7))
 False
 
+
+>>> pointcard = True
+>>> count = 5
+>>> if ((pointcard == True) and (count == 5)):
+...     print('いつもありがとうございます、今回は1000円です')
+...
+いつもありがとうございます、今回は1000円です
+>>>
+
+
+>>> age = 35
+>>> pointcard = True
+>>> count = 5
+>>> if(age < 18):
+...     print('チケットを売ることはできません')
+... elif ((age >= 60) or (pointcard == True) and (count == 5)):
+...     print('チケットは1000円です')
+... else:
+...     print('チケットは1800円です')
+...
+チケットは1000円です
+>>>
+
+□3-2 繰り返し
