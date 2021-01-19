@@ -121,4 +121,16 @@ False
 2
 >>>
 
+forの応用
+>>> word = 'ninja'
+>>> for chara in word:
+...     print(chara)
+...
+n
+i
+n
+j
+a
+>>>
+
 
