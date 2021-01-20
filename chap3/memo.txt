@@ -133,4 +133,33 @@ j
 a
 >>>
 
+for 変数 in データ:
+で、データに対して同じ処理を実行出来る
+
+
+リスト型に対して繰り返し
+>>> music_list = ['DEATH METAL', 'ROCK', 'ANIME', 'JPOP']
+>>> for music in music_list:
+...     print('Now playing... ' + music)
+...
+Now playing... DEATH METAL
+Now playing... ROCK
+Now playing... ANIME
+Now playing... JPOP
+>>>
+
+辞書型に対して繰り返し
+>>> menu = {'ラーメン': 500, 'チャーハン':430, '餃子': 210}
+>>> for order in menu:
+...     print(order)
+...     print(menu[order] * 1.10)
+...
+ラーメン
+550.0
+チャーハン
+473.00000000000006
+餃子
+231.00000000000003
+>>>
+
 
