@@ -161,5 +161,21 @@ Now playing... JPOP
 餃子
 231.00000000000003
 >>>
+orderには辞書型のキーが入る事に注意
+
+while (条件式):
+    繰り返し処理
+>>> counter = 0
+>>> while (counter < 5):
+...     print(counter)
+...     counter+=1
+...
+0
+1
+2
+3
+4
+>>>
+
 
 
