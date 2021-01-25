@@ -177,5 +177,38 @@ while (条件式):
 4
 >>>
 
+無限ループ
+>>> counter = 0
+>>> while (counter < 5):
+...     print(counter)
+...
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
 
+・break
+>>> power = 2
+>>> while(True):
+...     print('パンチ')
+...     print('キック')
+...     print('必殺奥義')
+...     power -=1
+...     if(power==0):
+...         break
+...
+パンチ
+キック
+必殺奥義
+パンチ
+キック
+必殺奥義
+>>>
 
+・contnue
