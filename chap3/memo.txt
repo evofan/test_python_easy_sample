@@ -212,3 +212,23 @@ while (条件式):
 >>>
 
 ・contnue
+繰り返し処理の中で使われ、continue後の処理をスキップして繰り返しに戻る
+>>> family = ["a-ko","b-ko","c-ko"]
+>>> for kid in family:
+...     print("お早う" + kid)
+...     print("起床")
+...     print("朝ごはん")
+...     continue
+...     print("学校に行く")
+...
+お早うa-ko
+起床
+朝ごはん
+お早うb-ko
+起床
+朝ごはん
+お早うc-ko
+起床
+朝ごはん
+>>>
+
