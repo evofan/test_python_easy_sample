@@ -254,3 +254,18 @@ def 関数名():
 乾燥します
 >>>
 
+>>> def softWash():
+...     print("給水します")
+...     print("やさしく洗います")
+...     print("`susugimasu")
+...     print("脱水します")
+...     print("乾燥します")
+...
+>>> mode="soft"
+>>> if(mode=="soft"):
+...     print("やさしく洗う")
+... elif(mode=="hard"):
+...     print("はげしく洗う")
+... else:
+...     print("普通に洗う")
+...
