@@ -262,10 +262,25 @@ def 関数名():
 ...     print("乾燥します")
 ...
 >>> mode="soft"
->>> if(mode=="soft"):
+>>> v
 ...     print("やさしく洗う")
 ... elif(mode=="hard"):
 ...     print("はげしく洗う")
 ... else:
 ...     print("普通に洗う")
 ...
+
+関数内に条件分岐＆引数でパラメーター渡し
+>>> def washingMachine(mode):
+...     print('給水します')
+...     if(mode=='soft'):
+...         print('やさしく洗う')
+...     elif(mode=='hard'):
+...         print('激しく洗う')
+...     else:
+...         print('普通に洗う')
+...
+>>> washingMachine('hard')
+給水します
+激しく洗う
+>>>
