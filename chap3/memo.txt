@@ -284,3 +284,72 @@ def 関数名():
 給水します
 激しく洗う
 >>>
+
+■返り値を返す
+>>> def area(radius):
+...     result = radius * radius * 3.14
+...     return result
+...
+>>> area(5)
+78.5
+>>>
+
+
+■ビルトイン関数
+文字数を返す
+>>> len("thunderbird")
+11
+
+要素の数を数える
+>>> animal = ['cat','dog','duck']
+>>> len(animal)
+3
+
+最大値を返す
+>>> max(100,7,55)
+100
+>>>
+
+最小値を返す
+>>> min(3,78,124)
+3
+>>> min('thunderbird')
+'b'
+
+>>> min('1Aab')
+'1'
+
+>>> max('1Aab')
+'b'
+
+数字＞大文字＞小文字
+
+>>> sorted([100,27,59,43,10,61])
+[10, 27, 43, 59, 61, 100]
+>>>
+
+>>> print(100+3)
+103
+
+>>> type(100)
+<class 'int'>
+>>> type("あああ")
+<class 'str'>
+>>>
+>>> type([1,2,3,4])
+<class 'list'>
+>>>
+
+>>> dir(str)
+['__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'capitalize', 'casefold', 'center', 'count', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'format_map', 'index', 'isalnum', 'isalpha', 'isascii', 'isdecimal', 'isdigit', 'isidentifier', 'islower', 'isnumeric', 'isprintable', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'maketrans', 'partition', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']
+>>>
+
+>>> dir(int)
+['__abs__', '__add__', '__and__', '__bool__', '__ceil__', '__class__', '__delattr__', '__dir__', '__divmod__', '__doc__', '__eq__', '__float__', '__floor__', '__floordiv__', '__format__', '__ge__', '__getattribute__', '__getnewargs__', '__gt__', '__hash__', '__index__', '__init__', '__init_subclass__', '__int__', '__invert__', '__le__', '__lshift__', '__lt__', '__mod__', '__mul__', '__ne__', '__neg__', '__new__', '__or__', '__pos__', '__pow__', '__radd__', '__rand__', '__rdivmod__', '__reduce__', '__reduce_ex__', '__repr__', '__rfloordiv__', '__rlshift__', '__rmod__', '__rmul__', '__ror__', '__round__', '__rpow__', '__rrshift__', '__rshift__', '__rsub__', '__rtruediv__', '__rxor__', '__setattr__', '__sizeof__', '__str__', '__sub__', '__subclasshook__', '__truediv__', '__trunc__', '__xor__', 'as_integer_ratio', 'bit_length', 'conjugate', 'denominator', 'from_bytes', 'imag', 'numerator', 'real', 'to_bytes']
+>>>
+
+>>> dir()
+['__annotations__', '__builtins__', '__doc__', '__loader__', '__name__', '__package__', '__spec__', 'animal', 'area']
+>>>
+
+3-4 エラーと例外
