@@ -1,0 +1,28 @@
+﻿■4-1クラス
+この本では設計図→製品で説明
+
+クラス→インスタンス
+
+class クラス名:
+    関数の定義
+    変数の定義
+
+例：
+>>> class Fruits:
+...     color = "red"
+...     def taste(self):
+...         return "delicious!"
+...
+>>> apple = Fruits()
+>>> apple.color
+'red'
+>>> apple.taste()
+'delicious!'
+>>>
+
+
+
+■4-2継承
+
+
+■4-3標準ライブラリ
