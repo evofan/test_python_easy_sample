@@ -37,6 +37,44 @@ class クラス名:
 □self
 クラスの中にメソッドを定義する場合、引数でselfを渡す
 
+>>> class Stuff:
+...     bonus = 30000
+...     def salary(self):
+...         salary = 10000 + bonus
+...         return salary
+...
+>>> yamada = Stuff()
+>>> yamada.salary()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 4, in salary
+NameError: name 'bonus' is not defined
+
+>>> class Stuff:
+...     bonus = 30000
+...     def salary(self):
+...         salary = 10000 + self.bonus
+...         return salary
+...
+>>> yamada = Stuff()
+>>> yamada.salary()
+40000
+>>>
+
+□__init__メソッド
+インスタンス化じに引数を渡して定義出来る
+>>> class Stuff():
+...     def __init__(self, bonus):
+...         self.bonus = bonus
+...     def salary(self):
+...         salary = 10000 + self.bonus
+...         return salary
+...
+>>> suzuki = Stuff(50000)
+>>> suzuki.salary()
+60000
+>>>
+
 
 ■4-2継承
 
