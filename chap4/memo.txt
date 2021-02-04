@@ -77,6 +77,11 @@ NameError: name 'bonus' is not defined
 
 
 ■4-2継承
+親クラス→子クラス
 
+class クラス名(親クラス名):
+    変数
+    def メソッド名():
+        処理
 
 ■4-3標準ライブラリ
