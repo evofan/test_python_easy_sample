@@ -84,4 +84,149 @@ class クラス名(親クラス名):
     def メソッド名():
         処理
 
+>>> class AnimalBaseClass:
+...     animallegs=4
+...     def walk(self):
+...         print("歩く")
+...     def cry(self):
+...         print("鳴く")
+...     def getLegsNum(self):
+...         print(self.animallegs)
+...             
+>>> class dogClass(AnimalBaseClass):
+...     def __init__(self):
+...         print("犬です")
+...
+>>> wanko=dogClass()
+犬です
+>>> wanko.walk()
+歩く
+>>> wanko.cry()
+鳴く
+>>> wanko.getLegsNum()
+4
+>>>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ■4-3標準ライブラリ
