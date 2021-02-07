@@ -107,6 +107,28 @@ class クラス名(親クラス名):
 4
 >>>
 
+・オーバーライド
+>>> class AnimalBaseClass:
+...     animallegs=2
+...     def walk(self):
+...         print("歩く")
+...     def cry(self):
+...         print("鳴く")
+...
+>>> class BirdClass(AnimalBaseClass):
+...     def __init__(self):
+...         print("鳥です")
+...     def cry(self):
+...         print("ぴよぴよ")
+...
+>>> piyosuke = BirdClass()
+鳥です
+>>> piyosuke.walk()
+歩く
+>>> piyosuke.cry()
+ぴよぴよ
+>>>
+
 
 
 
