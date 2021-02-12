@@ -129,126 +129,32 @@ class クラス名(親クラス名):
 ぴよぴよ
 >>>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+↑同名メソッドを子クラスで定義すると、子クラスの方が実行される＝オーバーライド
+
+
+>>> class AnimalBaseClass:
+...     def __init__(self, num):
+...         self.animallegs = num;
+...     def walk(self):
+...         print("歩く")
+...     def cry(self):
+...         print("鳴く")
+...     def getLegsNum(self):
+...         print(self.animallegs)
+
+
+>>> class SnakeClass(AnimalBaseClass):
+...     def __init__(self, num):
+...         parent_class = super(SnakeClass, self)
+...         parent_class.__init__(num)
+...         print("蛇です")
+
+>>> nyoro = SnakeClass(0)
+蛇です
+>>> nyoro.getLegsNum()
+0
+
+★super(子クラス名, インスタンス)で親クラスの初期化メソッドを呼んでいる
 
 
 ■4-3標準ライブラリ
