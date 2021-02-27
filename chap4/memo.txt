@@ -206,3 +206,19 @@ from無しでは
 と書く必要がある
 
 ・その他の標準ライブラリ
+Pythonには多くの標準ライブラリがある
+
+Python 標準ライブラリ 3.8.8
+https://docs.python.org/ja/3.8/library/
+
+■日付や時刻に関する標準ライブラリ
+・datetimeモジュール
+
+datetime --- 基本的な日付型および時間型
+https://docs.python.org/ja/3.8/library/datetime.html
+
+今日の日付を取得する
+>>> from datetime import date
+>>> date.today()
+datetime.date(2021, 2, 27)
+>>>
