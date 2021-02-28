@@ -222,3 +222,13 @@ https://docs.python.org/ja/3.8/library/datetime.html
 >>> date.today()
 datetime.date(2021, 2, 27)
 >>>
+
+date型のデータを文字列に変換する
+>>> from datetime import date
+>>> today.strftime('%y%m%d')
+'210228'
+>>> today.strftime('%Y/%m/%d')
+'2021/02/28'
+>>> today.strftime('%Y %B %d %a')
+'2021 February 28 Sun'
+
