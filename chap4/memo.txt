@@ -232,3 +232,16 @@ date型のデータを文字列に変換する
 >>> today.strftime('%Y %B %d %a')
 '2021 February 28 Sun'
 
+
+
+現在の日付と時刻を取得する
+>>> from datetime import datetime
+>>> datetime.now()
+datetime.datetime(2021, 3, 1, 23, 49, 3, 283734)
+>>>
+
+>>> from datetime import datetime as dt
+>>> now = dt.now()
+>>> now.strftime('%Y-%m-%d %H;%M;%S')
+'2021-03-01 23;50;18'
+>>>
