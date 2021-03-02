@@ -245,3 +245,17 @@ datetime.datetime(2021, 3, 1, 23, 49, 3, 283734)
 >>> now.strftime('%Y-%m-%d %H;%M;%S')
 '2021-03-01 23;50;18'
 >>>
+
+一週間後の日付を設定する
+>>> today = date.today()
+>>> today
+datetime.date(2021, 3, 2)
+>>> one_week = timedelta(days=7)
+>>> today + one_week
+datetime.date(2021, 3, 9)
+>>> today - one_week
+datetime.date(2021, 2, 23)
+>>>
+
+
+
