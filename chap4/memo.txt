@@ -257,5 +257,23 @@ datetime.date(2021, 3, 9)
 datetime.date(2021, 2, 23)
 >>>
 
+zipファイルの解凍
+>>> import zipfile
+>>> files = zipfile.ZipFile('python-3.9.0-embed-amd64.zip')
+>>> files.namelist()
+['python.exe', 'pythonw.exe', 'python39.dll', 'python3.dll', 'vcruntime140.dll', 'vcruntime140_1.dll', 'LICENSE.txt', 'pyexpat.pyd', 'select.pyd', 'unicodedata.pyd', 'winsound.pyd', '_asyncio.pyd', '_bz2.pyd', '_ctypes.pyd', '_decimal.pyd', '_elementtree.pyd', '_hashlib.pyd', '_lzma.pyd', '_msi.pyd', '_multiprocessing.pyd', '_overlapped.pyd', '_queue.pyd', '_socket.pyd', '_sqlite3.pyd', '_ssl.pyd', '_uuid.pyd', '_zoneinfo.pyd', 'libcrypto-1_1.dll', 'libffi-7.dll', 'libssl-1_1.dll', 'sqlite3.dll', 'python39.zip', 'python39._pth', 'python.cat']
+>>> files.extract('python.exe')
+'C:\\Users\\USER\\Desktop\\test\\python.exe'
+>>> files.extractall()
+>>> files.close()
+>>>
 
+ファイルの圧縮
+>>> import zipfile
+>>> zip_file = zipfile.ZipFile('python_code.zip', mode='w')
+>>> zip_file.close()
+>>> file = zipfile.ZipFile('python_code.zip')
+>>> file.namelist()
+[]
 
+d
