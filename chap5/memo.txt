@@ -10,3 +10,18 @@ cd ... ディレクトリ移動
 dir ... ディレクトリを表示
 mkdir ... ディレクトリ（フォルダ）作成
 python ... Pythonの実行（インタラクティブシェルを起動）
+
+■5-4 ファイルオブジェクト
+ファイルをプログラム上から扱う時は、ファイルオブジェクトを介して操作を行う
+
+ファイルオブジェクトを作る
+open("ファイル名", "mode")
+モードはread, write, add（追記）の略のr, w, aを使う
+
+存在しないファイルを読み込むとエラーになる
+>>> open("test.txt", "r")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+FileNotFoundError: [Errno 2] No such file or directory: 'test.txt'
+>>>
+
