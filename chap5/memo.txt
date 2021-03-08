@@ -25,3 +25,13 @@ Traceback (most recent call last):
 FileNotFoundError: [Errno 2] No such file or directory: 'test.txt'
 >>>
 
+書き込みモードを試す
+>>> file_object = open('test.txt', 'w')
+>>> file_object.write('this is sample of python')
+24
+>>> file_object.close()
+>>> file_object.write('this is sample of python') ←破棄されたので2回目はエラーが出る
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: I/O operation on closed file.
+>>>
