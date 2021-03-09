@@ -35,3 +35,14 @@ Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 ValueError: I/O operation on closed file.
 >>>
+
+
+>>> file_object = open('python.txt', 'w')
+>>> file_object.write('this is sample of python. \n')
+27
+>>> file_object.flush()
+
+C:\Users\USER\Desktop\temp内
+this is sample of python. 
+
+
