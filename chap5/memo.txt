@@ -46,3 +46,17 @@ C:\Users\USER\Desktop\temp内
 this is sample of python. 
 
 
+読み込みモードを試す
+C:\Users\USER\Documents\test_python_easy_sample\chap5\tempで
+>>> file_object = open('python.txt', 'r')
+>>> file_object.read()
+'this is sample of python. \n'
+>>>
+
+又は
+>>> file_object=open('C:\\Users\\USER\\Documents\\test_python_easy_sample\\chap5\\temp\\python.txt', 'r')
+>>> file_object.read()
+'this is sample of python. \n'
+>>>
+
+
