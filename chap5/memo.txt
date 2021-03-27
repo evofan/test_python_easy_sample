@@ -59,4 +59,12 @@ C:\Users\USER\Documents\test_python_easy_sample\chap5\tempで
 'this is sample of python. \n'
 >>>
 
+追記モードを試す
+>>> file_object=open('C:\\Users\\USER\\Documents\\test_python_easy_sample\\chap5\\temp\\python.txt', 'a')
+>>> file_object.write("Add text from program!")
+22
+>>> file_object.close()
+>>>
+this is sample of python. 
+Add text from program!
 
