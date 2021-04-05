@@ -68,3 +68,29 @@ C:\Users\USER\Documents\test_python_easy_sample\chap5\tempで
 this is sample of python. 
 Add text from program!
 
+外部ファイルへの読み込み＋書き込み
+>>> file_object=open('C:\\Users\\USER\\Documents\\test_python_easy_sample\\chap5\\temp\\python2.txt', 'r+')
+>>> file_object.read()
+'this is sample of python. \nAdd text from program!'
+>>> file_object.write("Add text from program2!")
+23
+>>> file_object.read()
+''
+>>> file_object.seek(0) ※読み始める場所を指定
+0
+>>> file_object.read()
+'this is sample of python. \nAdd text from program!Add text from program2!'
+>>> file_object.close()
+>>>
+
+withで自動クローズ
+>>> with open('C:\\Users\\USER\\Documents\\test_python_easy_sample\\chap5\\temp\\with.txt', 'w') as file_object:
+...     file_object.write('using with!')
+...
+11
+>>>
+C:\Users\USER\Documents\test_python_easy_sample\chap5\temp\with.txt
+using with!
+
+※慣習：一行のプログラムは79文字まで
+※インデントはTABもしくはスペース4つで統一、エディタで指定も出来る
