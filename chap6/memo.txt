@@ -1,0 +1,77 @@
+﻿さまざまな機能を取り込もう
+外部ライブラリの使用
+
+■6-1 外部ライブラリとは
+標準ライブラリ＝importで使う
+外部ライブラリ＝別途インストールが必要、標準より高度で複雑な処理を行うものが多い
+「Python 画像処理」等で見つかる
+
+PyPI The Python Package Index
+https://pypi.org/
+Pythonの外部ライブラリが多く登録されている
+
+・外部ライブラリの使い方
+①外部ライブラリのインストール
+②Pythonから呼び出せるようにする
+
+Python2.7.9、Pythpm3.4以降ではpipコマンドでnpmのようにインストール出来る
+（MacのPython3ではpip3コマンド）
+
+・pipコマンドの使い方
+
+インストール
+pip install モジュール名
+C:\Users\USER>pip install Pillow
+Collecting Pillow
+  Downloading https://files.pythonhosted.org/packages/0b/ac/d01c8d2ce0f2680d066ef4b0f393b3149aab8451792afc02fe4990987f4b/Pillow-8.2.0-cp38-cp38-win_amd64.whl (2.2MB)
+     |████████████████████████████████| 2.2MB 3.3MB/s
+Installing collected packages: Pillow
+Successfully installed Pillow-8.2.0
+WARNING: You are using pip version 19.2.3, however version 21.0.1 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command.
+
+アンインストール
+pip uninstall モジュール名
+
+詳細を調べる
+pip show モジュール名
+C:\Users\USER>pip show Pillow
+Name: Pillow
+Version: 8.2.0
+Summary: Python Imaging Library (Fork)
+Home-page: https://python-pillow.org
+Author: Alex Clark (PIL Fork Author)
+Author-email: aclark@python-pillow.org
+License: HPND
+Location: c:\users\user\appdata\local\programs\python\python38\lib\site-packages
+Requires:
+Required-by:
+
+今までにインストールしたモジュール一覧
+C:\Users\USER>pip list
+Package           Version
+----------------- -------
+astroid           2.4.2
+colorama          0.4.4
+isort             5.6.4
+lazy-object-proxy 1.4.3
+mccabe            0.6.1
+Pillow            8.2.0
+pip               19.2.3
+pylint            2.6.0
+setuptools        41.2.0
+six               1.15.0
+toml              0.10.2
+wrapt             1.12.1
+WARNING: You are using pip version 19.2.3, however version 21.0.1 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command.
+
+■6-2 外部ライブラリを使ったプログラミング、Pythonで画像処理
+
+■6-3 外部ライブラリを使ったプログラミング、Pythonでインタビューネットにアクセス
+
+■6-4 外部ライブラリを使ったプログラミング、Pythonで情報収集
+□クローリングとスクレイピング
+
+■6-5 外部ライブラリモジュールを自分で作ってみる
+□モジュールの作り方
