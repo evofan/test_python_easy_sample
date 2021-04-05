@@ -12,3 +12,5 @@ reference
 **Python 標準ライブラリ 3.8.8**  
 [https://docs.python.org/ja/3.8/library/](https://docs.python.org/ja/3.8/library/)  
 
+**PyPI The Python Package Index**  
+[https://pypi.org/](https://pypi.org/)  
