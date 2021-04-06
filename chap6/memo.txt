@@ -67,6 +67,12 @@ WARNING: You are using pip version 19.2.3, however version 21.0.1 is available.
 You should consider upgrading via the 'python -m pip install --upgrade pip' command.
 
 ■6-2 外部ライブラリを使ったプログラミング、Pythonで画像処理
+Pillowというライブラリを使って画像処理を行う
+pip install Pillow
+>>> from PIL import Image
+>>> image = Image.open('C:\\Users\\USER\\Documents\\test_python_easy_sample\\chap6\\temp\\4283623_s.jpg')
+>>> image.show()
+→Fireworksで指定の画像が立ち上がった
 
 ■6-3 外部ライブラリを使ったプログラミング、Pythonでインタビューネットにアクセス
 
