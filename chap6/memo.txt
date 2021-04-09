@@ -72,7 +72,16 @@ pip install Pillow
 >>> from PIL import Image
 >>> image = Image.open('C:\\Users\\USER\\Documents\\test_python_easy_sample\\chap6\\temp\\4283623_s.jpg')
 >>> image.show()
-→Fireworksで指定の画像が立ち上がった
+→指定の画像が立ち上がった
+
+赤色と青色の入れ違った画像を表示する
+>>> from PIL import Image
+>>> image = Image.open('C:\\Users\\USER\\Documents\\test_python_easy_sample\\chap6\\temp\\4283623_s.jpg')
+>>> r, g, b = image.split()
+>>> convert_image = Image.merge("RGB", (b,g,r))
+>>> convert_image.save('C:\\Users\\USER\\Documents\\test_python_easy_sample\\chap6\\temp\\rgb_to_bgr.jpg');
+>>> convert_image.show()
+→色の入れ替わった画像が立ち上がって表示された
 
 ■6-3 外部ライブラリを使ったプログラミング、Pythonでインタビューネットにアクセス
 
