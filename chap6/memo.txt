@@ -83,6 +83,27 @@ pip install Pillow
 >>> convert_image.show()
 →色の入れ替わった画像が立ち上がって表示された
 
+白黒に変換
+>>> from PIL import Image
+>>> image = Image.open('C:\\Users\\USER\\Documents\\test_python_easy_sample\\chap6\\temp\\4283623_s.jpg')
+>>> black_and_white = image.convert('1')
+>>> convert_image.show()
+>>> black_and_white.save('C:\\Users\\USER\\Documents\\test_python_easy_sample\\chap6\\temp\\b_and_w.jpg')
+
+グレースケールに変換
+>>> from PIL import Image
+>>> image = Image.open('C:\\Users\\USER\\Documents\\test_python_easy_sample\\chap6\\temp\\4283623_s.jpg')
+>>> gray_image = image.convert('L')
+>>> gray_image.show()
+>>> gray_image.save('C:\\Users\\USER\\Documents\\test_python_easy_sample\\chap6\\temp\\gray.jpg')
+
+画像を回転させる
+>>> from PIL import Image
+>>> image = Image.open('C:\\Users\\USER\\Documents\\test_python_easy_sample\\chap6\\temp\\4283623_s.jpg')
+>>> image.transpose(Image.ROTATE_90).show()
+>>> image.transpose(Image.ROTATE_90).save('C:\\Users\\USER\\Documents\\test_python_easy_sample\\chap6\\temp\\rotate90.jpg')
+
+
 ■6-3 外部ライブラリを使ったプログラミング、Pythonでインタビューネットにアクセス
 
 ■6-4 外部ライブラリを使ったプログラミング、Pythonで情報収集
