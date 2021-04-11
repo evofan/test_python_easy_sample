@@ -18,3 +18,6 @@ reference
 **無料写真素材「写真AC」桜と青空の背景**  
 [https://www.photo-ac.com/main/detail/4283623?title=%E6%A1%9C%E3%81%A8%E9%9D%92%E7%A9%BA%E3%81%AE%E8%83%8C%E6%99%AF&searchId=3868647390](https://www.photo-ac.com/main/detail/4283623?title=%E6%A1%9C%E3%81%A8%E9%9D%92%E7%A9%BA%E3%81%AE%E8%83%8C%E6%99%AF&searchId=3868647390)  
 Use image for sample
+
+**Requests: 人間のためのHTTP**  
+[https://requests-docs-ja.readthedocs.io/en/latest/](https://requests-docs-ja.readthedocs.io/en/latest/)  
