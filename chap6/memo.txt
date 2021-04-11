@@ -105,6 +105,55 @@ pip install Pillow
 
 
 ■6-3 外部ライブラリを使ったプログラミング、Pythonでインタビューネットにアクセス
+webブラウザを介せずにアクセスする
+requestsという外部ライブラリを使用する
+
+Requests: 人間のためのHTTP
+https://requests-docs-ja.readthedocs.io/en/latest/
+C:\Users\USER>pip install requests
+Collecting requests
+  Downloading https://files.pythonhosted.org/packages/29/c1/24814557f1d22c56d50280771a17307e6bf87b70727d975fd6b2ce6b014a/requests-2.25.1-py2.py3-none-any.whl (61kB)
+     |████████████████████████████████| 61kB 4.1MB/s
+Collecting certifi>=2017.4.17 (from requests)
+  Downloading https://files.pythonhosted.org/packages/5e/a0/5f06e1e1d463903cf0c0eebeb751791119ed7a4b3737fdc9a77f1cdfb51f/certifi-2020.12.5-py2.py3-none-any.whl (147kB)
+     |████████████████████████████████| 153kB 6.4MB/s
+Collecting idna<3,>=2.5 (from requests)
+  Downloading https://files.pythonhosted.org/packages/a2/38/928ddce2273eaa564f6f50de919327bf3a00f091b5baba8dfa9460f3a8a8/idna-2.10-py2.py3-none-any.whl (58kB)
+     |████████████████████████████████| 61kB 3.8MB/s
+Collecting urllib3<1.27,>=1.21.1 (from requests)
+  Downloading https://files.pythonhosted.org/packages/09/c6/d3e3abe5b4f4f16cf0dfc9240ab7ce10c2baa0e268989a4e3ec19e90c84e/urllib3-1.26.4-py2.py3-none-any.whl (153kB)
+     |████████████████████████████████| 153kB 6.4MB/s
+Collecting chardet<5,>=3.0.2 (from requests)
+  Downloading https://files.pythonhosted.org/packages/19/c7/fa589626997dd07bd87d9269342ccb74b1720384a4d739a1872bd84fbe68/chardet-4.0.0-py2.py3-none-any.whl (178kB)
+     |████████████████████████████████| 184kB 6.4MB/s
+Installing collected packages: certifi, idna, urllib3, chardet, requests
+Successfully installed certifi-2020.12.5 chardet-4.0.0 idna-2.10 requests-2.25.1 urllib3-1.26.4
+WARNING: You are using pip version 19.2.3, however version 21.0.1 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command.
+
+>>> import requests
+>>> r = requests.get('http://www.yahoo.co.jp')
+>>> print(r.text)
+<!DOCTYPE html><html lang="ja"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/><title>Yahoo! JAPAN</title><meta name="description" content="あなたの毎日をアップデートする情報ポータル。検索、ニュース、天気、スポーツ、メール、ショッピング、オークションなど便利なサービスを展開しています。"/><meta name="robots" content="noodp"/><meta name="viewport" content="width=1010"/><link rel="dns-prefetch" href="//s.yimg.jp"/><link rel="dns-prefetch" href="//yads.c.yimg.jp"/><meta name="google-site-verification" content="fsLMOiigp5fIpCDMEVodQnQC7jIY1K3UXW5QkQcBmVs"/><link rel="alternate" href="android-app://jp.co.yahoo.android.yjtop/yahoojapan/home/top"/><link rel="alternate" media="only screen and (max-width: 640px)" href="https://m.yahoo.co.jp/"/><link rel="canonical" href="https://www.yahoo.co.jp/"/><link rel="shortcut icon" href="https://s.yimg.jp/c/icon/s/bsc/2.0/favicon.ico" type="image/vnd.microsoft.icon"/><link rel="icon" href="https://s.yimg.jp/c/icon/s/bsc/2.0/favicon.ico" type="image/vnd.microsoft.icon"/><meta property="og:title" content="Yahoo! JAPAN"/><meta property="og:type" content="website"/><meta property="og:url" content="https://www.yahoo.co.jp/"/><meta property="og:image" content="https://s.yimg.jp/images/top/ogp/fb_y_1500px.png"/><meta property="og:description" content="あなたの毎日をアップデートする情報ポータル。検索、ニュース、天気、スポーツ、メール、ショッピング、 オークションなど便利なサービスを展開しています。"/><meta property="og:site_name" content="Yahoo! JAPAN"/><meta property="twitter:card" content="summary_large_image"/><meta property="twitter:site" content="@Yahoo_JAPAN_PR"/><meta property="twitter:image" content="https://s.yimg.jp/images/top/ogp/tw_y_1400px.png"/><meta property="fb:app_id" content="472870002762883"/><link rel="stylesheet" href="//s.yimg.jp/images/top/orion/20210316/bundle_20210316.css"/><script>window.onbeforeunload = function() {}</script><script>
+            var TLDataContext = {
+              ual : {
+※以下省略
+
+整形したテキストを表示
+>>> import requests
+>>> import pprint
+>>> r = requests.get('http://www.yahoo.co.jp')
+>>> pprint.pprint(r.text)
+('<!DOCTYPE html><html lang="ja"><head><meta charSet="utf-8"/><meta '
+ 'http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/><title>Yahoo! '
+ 'JAPAN</title><meta name="description" '
+ 'content="あなたの毎日をアップデートする情報ポータル。検索、ニュース、天気、スポーツ、メール、ショッピング、オークショ ンなど便利なサービスを展開しています。"/><meta '
+ 'name="robots" content="noodp"/><meta name="viewport" '
+ 'content="width=1010"/><link rel="dns-prefetch" href="//s.yimg.jp"/><link '
+ 'rel="dns-prefetch" href="//yads.c.yimg.jp"/><meta '
+ 'name="google-site-verification" '
+※以下省略
+
 
 ■6-4 外部ライブラリを使ったプログラミング、Pythonで情報収集
 □クローリングとスクレイピング
