@@ -163,10 +163,131 @@ API=Apprication Proggraming Interface、様々な機能の入口
 
 
 requestsを使ったAPIへのアクセス方法（天気予報編）
+※サンプルのLivedoor Weather Hacksが2020年7月で終了したため、使用不可
 
+気象庁で提供しているRSS
+https://www.jma.go.jp/jma/menu/rss_info.html
+これを使う？
+
+Yahoo!天気・災害で
+https://weather.yahoo.co.jp/weather/rss/
+↑のがいいかも
+
+'https://rss-weather.yahoo.co.jp/rss/days/4410.xml'
+
+>>> import requests
+>>> import pprint
+>>> api_url = 'https://rss-weather.yahoo.co.jp/rss/days/4410.xml'
+>>> weather_data = requests.get(api_url)
+>>> pprint.pprint(weather_data)
+<Response [200]>
+※元のサンプルはJSONデータの処理なのでうまくいかない
+※ので省略
+
+
+requestsを使ったAPIへのアクセス方法（wikipedia編）
+>>> import requests
+>>> import pprint
+>>> api_url = 'https://ja.wikipedia.org/w/api.php'
+>>> api_params = {'format':'json', 'action':'query', 'titles':'椎名林檎', 'prop':'revisions', 'rvprop':'content' }
+>>> wiki_data = requests.get(api_url, params=api_params).json()
+>>> pprint.pprint(wiki_data)
+{'batchcomplete': '',
+ 'warnings': {'main': {'*': 'Unrecognized parameter: titiles.'}}}
+>>>
+>>> pprint.pprint(wiki_data)
+{'batchcomplete': '',
+ 'query': {'pages': {'2771081': {'ns': 0,
+                                 'pageid': 2771081,
+                                 'revisions': [{'*': '{{半保護}}\n'
+                                                     '{{Infobox Musician\n'
+                                                     '|名前=椎名 林檎\n'
+                                                     '|画像= '
+                                                     'Shiina_Ringo_2016.jpg\n'
+                                                     '|画像説明=[[SPACE SHOWER '
+                                                     'MUSIC AWARDS]]にて（BEST '
+                                                     'FEMALE ARTISTを受賞）\n'
+                                                     '|画像サイズ=\n'
+                                                     '|画像補正=\n'
+                                                     '|背景色=singer\n'
+                                                     '|出生名={{要出典範囲|椎名 裕美子（しいな '
+                                                     'ゆみこ）|date=2020-08}}\n'
+                                                     '|別名=Deyonná<ref '
+                                                     'group="注">[[レキシ]]の楽曲「きらきら武士」に参加した際の変名。</ref>\n'
+                                                     '|出生={{生年月日と年齢|1978|11|25}}\n'
+                                                     '|出身地={{JPN1947}}、[[埼玉県]][[浦和市]]（現[[さいたま市]][[浦和 区]]）\n'
+                                                     '|死没=\n'
+                                                     '|血液型=\n'
+                                                     '|学歴=\n'
+                                                     '|担当楽器={{plainlist|\n'
+                                                     '*[[ボーカル]]\n'
+                                                     '*[[ギター]]<ref '
+                                                     'group="注">それ以外にも、ライブやレコーディングでは[[ピアノ]]・[[ キーボード '
+                                                     '(楽器)|キーボード]]・[[鍵盤ハーモニカ]]・[[ベース]]・[[ドラムセッ ト|ドラム]]・[[パーカッション]]・[[タンブリン|タンバリン]]などを演奏することもあり、またライブでは曲によって[[マイクロフォン|マイク]]の代わりに[[メガホン|拡声器]]を使って歌唱する。</ref>\n'
+                                                     '}}\n'
+                                                     '|ジャンル={{plainlist|\n'
+                                                     '*[[ロック (音楽)|ロック]]\n'
+                                                     '*[[J-POP]]\n'
+                                                     '*[[ジャズ]]\n'
+                                                     '*[[アシッドジャズ]]\n'
+                                                     '*[[オルタナティヴ・ロック]]\n'
+                                                     '*[[エレクトロニカ]]\n'
+                                                     '*[[インダストリアル]]\n'
+                                                     '*[[プログレッシブ・ロック]]\n'
+                                                     '*[[パンク・ロック]]\n'
+                                                     '*[[エクスペリメンタル・ロック]]\n'
+                                                     '*[[スウィング・ジャズ]]\n'
+                                                     '}}\n'
+                                                     '\n'
+                                                     '|職業={{plainlist|\n'
+                                                     '*[[シンガーソングライター]]\n'
+                                                     '*[[作詞家]]\n'
+                                                     '*[[作曲家]]\n'
+                                                     '*[[編曲家]]\n'
+                                                     '*[[音楽プロデューサー|プロデューサー]]\n'
+                                                     '}}\n'
+                                                     '|活動期間=[[1998年]] - 現在<ref '
+                                                     'group="注">2001年から2002年にかけては出産のため、2004年から2005年 にかけてはバンド・東京事変のボーカルに専念するためにソロ歌手としての活動を休止。</ref>\n'
+                                                     '|レーベル={{plainlist|\n'
+                                                     '*[[EMIミュージック・ジャパン|東芝EMI]]/EASTWORLD（1998年 '
+                                                     '- 1999年）\n'
+※途中省略
+                                                'contentformat': 'text/x-wiki',
+                                                'contentmodel': 'wikitext'}],
+                                 'title': '椎名林檎'}}},
+ 'warnings': {'main': {'*': 'Subscribe to the mediawiki-api-announce mailing '
+                            'list at '
+                            '<https://lists.wikimedia.org/mailman/listinfo/mediawiki-api-announce> '
+                            'for notice of API deprecations and breaking '
+                            'changes. Use [[Special:ApiFeatureUsage]] to see '
+                            'usage of deprecated features by your '
+                            'application.'},
+              'revisions': {'*': 'Because "rvslots" was not specified, a '
+                                 'legacy format has been used for the output. '
+                                 'This format is deprecated, and in the future '
+                                 'the new format will always be used.'}}}
+>>>
+
+wikipediaの情報を取得する（応用編）
+※wikipedia1b.pyを参照
+
+ファイルに引数を渡す方法
+>>> import sys
+>>> print(sys.argv)
+['']
+
+C:\Users\USER\Documents\test_python_easy_sample\chap6>python test_sys.py one two three four
+['test_sys.py', 'one', 'two', 'three', 'four']
+？
+ファイルの中身でなく、ファイル名を渡している？
+
+C:\Users\USER\Documents\test_python_easy_sample\chap6>python wikipedia2.py '東京事変'
+※↑最後の引数の単語が無いとエラーになる
+出力されたwiki2.htmlの内容も空？
 
 ■6-4 外部ライブラリを使ったプログラミング、Pythonで情報収集
 □クローリングとスクレイピング
+
 
 ■6-5 外部ライブラリモジュールを自分で作ってみる
 □モジュールの作り方
