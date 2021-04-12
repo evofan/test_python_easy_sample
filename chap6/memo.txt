@@ -155,6 +155,16 @@ You should consider upgrading via the 'python -m pip install --upgrade pip' comm
 ※以下省略
 
 
+requestsを使ってWEB APIにアクセス
+API=Apprication Proggraming Interface、様々な機能の入口
+例えばTwitter APIを使えばブラウザを介せずに投稿したり閲覧したりすることが出来る
+
+他にはNTTドコモのAPIでは、画像認識、音声認識、言語解析、雑談対話等が出来る
+
+
+requestsを使ったAPIへのアクセス方法（天気予報編）
+
+
 ■6-4 外部ライブラリを使ったプログラミング、Pythonで情報収集
 □クローリングとスクレイピング
 
