@@ -285,9 +285,35 @@ C:\Users\USER\Documents\test_python_easy_sample\chap6>python wikipedia2.py '東�
 ※↑最後の引数の単語が無いとエラーになる
 出力されたwiki2.htmlの内容も空？
 
+
 ■6-4 外部ライブラリを使ったプログラミング、Pythonで情報収集
 □クローリングとスクレイピング
+クローリング...webサイトからそのまま情報を収集してくる、crawl
+スクレイピング...集めた情報から必要なものだけを抽出する、scrape
 
+BeautifulSpu4...スクレイピングするモジュール
+C:\Users\USER>pip install beautifulsoup4
+Collecting beautifulsoup4
+  Downloading https://files.pythonhosted.org/packages/d1/41/e6495bd7d3781cee623ce23ea6ac73282a373088fcd0ddc809a047b18eae/beautifulsoup4-4.9.3-py3-none-any.whl (115kB)
+     |████████████████████████████████| 122kB 252kB/s
+Collecting soupsieve>1.2; python_version >= "3.0" (from beautifulsoup4)
+  Downloading https://files.pythonhosted.org/packages/36/69/d82d04022f02733bf9a72bc3b96332d360c0c5307096d76f6bb7489f7e57/soupsieve-2.2.1-py3-none-any.whl
+Installing collected packages: soupsieve, beautifulsoup4
+Successfully installed beautifulsoup4-4.9.3 soupsieve-2.2.1
+WARNING: You are using pip version 19.2.3, however version 21.0.1 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command.
+
+>>> from bs4 import BeautifulSoup
+>>> soup = BeautifulSoup("<html> Lollipop </html>","html.parser")
+
+BeautifulSpu4の基本的な使い方
+>>> import requests
+>>> from bs4 import BeautifulSoup
+>>> html_data = requests.get('http://www.yahoo.co.jp/')
+>>> soup = BeautifulSoup(html_data.text,"html.parser")
+>>> soup.title
+<title>Yahoo! JAPAN</title>
+>>>
 
 ■6-5 外部ライブラリモジュールを自分で作ってみる
 □モジュールの作り方
