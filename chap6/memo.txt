@@ -315,5 +315,130 @@ BeautifulSpu4の基本的な使い方
 <title>Yahoo! JAPAN</title>
 >>>
 
+
+>>> import requests
+>>> from bs4 import BeautifulSoup
+>>> a = requests.get('http://news.yahoo.co.jp/pickup/computer/rss.xml')
+>>> soup = BeautifulSoup(a.text,"html.parser")
+>>> type(soup)
+<class 'bs4.BeautifulSoup'>
+>>> soup.findAll('item')
+[<item>
+<title>本RSSのURLは変更になりました。新しいRSSのURLへ移行をお願いします。</title>
+<link/>https://yahoo.jp/ibOrnq
+</item>, <item>
+<title>マネックス証券 システム不具合</title>
+<link/>https://news.yahoo.co.jp/pickup/6390799
+<pubdate>Fri, 16 Apr 2021 12:01:29 +0900</pubdate>
+<guid ispermalink="false">yahoo/news/topics/6390799</guid>
+</item>, <item>
+<title>COCOA巡り厚労省「業者任せ」</title>
+<link/>https://news.yahoo.co.jp/pickup/6390787
+<pubdate>Fri, 16 Apr 2021 09:47:38 +0900</pubdate>
+<enclosure length="133" type="image/gif" url="https://s.yimg.jp/images/icon/photo.gif">
+</enclosure>
+<guid ispermalink="false">yahoo/news/topics/6390787</guid>
+</item>, <item>
+<title>Amazonプライム 2億人を突破</title>
+<link/>https://news.yahoo.co.jp/pickup/6390793
+<pubdate>Fri, 16 Apr 2021 10:42:16 +0900</pubdate>
+<enclosure length="133" type="image/gif" url="https://s.yimg.jp/images/icon/photo.gif">
+</enclosure>
+<guid ispermalink="false">yahoo/news/topics/6390793</guid>
+</item>, <item>
+<title>米コインベース ナスダック上場</title>
+<link/>https://news.yahoo.co.jp/pickup/6390700
+<pubdate>Thu, 15 Apr 2021 11:02:18 +0900</pubdate>
+<enclosure length="133" type="image/gif" url="https://s.yimg.jp/images/icon/photo.gif">
+</enclosure>
+<guid ispermalink="false">yahoo/news/topics/6390700</guid>
+</item>, <item>
+<title>カプコン流出 大阪府警が捜査</title>
+<link/>https://news.yahoo.co.jp/pickup/6390673
+<pubdate>Wed, 14 Apr 2021 22:51:09 +0900</pubdate>
+<enclosure length="133" type="image/gif" url="https://s.yimg.jp/images/icon/photo.gif">
+</enclosure>
+<guid ispermalink="false">yahoo/news/topics/6390673</guid>
+</item>, <item>
+<title>楽天に5G電波追加 東名阪以外で</title>
+<link/>https://news.yahoo.co.jp/pickup/6390660
+<pubdate>Wed, 14 Apr 2021 20:17:28 +0900</pubdate>
+<enclosure length="133" type="image/gif" url="https://s.yimg.jp/images/icon/photo.gif">
+</enclosure>
+<guid ispermalink="false">yahoo/news/topics/6390660</guid>
+</item>, <item>
+<title>新Xperia 世界初のレンズ搭載</title>
+<link/>https://news.yahoo.co.jp/pickup/6390659
+<pubdate>Wed, 14 Apr 2021 19:40:03 +0900</pubdate>
+<enclosure length="133" type="image/gif" url="https://s.yimg.jp/images/icon/photo.gif">
+</enclosure>
+<guid ispermalink="false">yahoo/news/topics/6390659</guid>
+</item>, <item>
+<title>不適切動画巡り焼き肉店側謝罪</title>
+<link/>https://news.yahoo.co.jp/pickup/6390736
+<pubdate>Thu, 15 Apr 2021 17:06:50 +0900</pubdate>
+<enclosure length="133" type="image/gif" url="https://s.yimg.jp/images/icon/photo.gif">
+</enclosure>
+<guid ispermalink="false">yahoo/news/topics/6390736</guid>
+</item>]
+>>>
+
+>>> for news in soup.findAll('item'):
+...     print(news.title)
+...
+<title>本RSSのURLは変更になりました。新しいRSSのURLへ移行をお願いします。</title>
+<title>マネックス証券 システム不具合</title>
+<title>COCOA巡り厚労省「業者任せ」</title>
+<title>Amazonプライム 2億人を突破</title>
+<title>米コインベース ナスダック上場</title>
+<title>カプコン流出 大阪府警が捜査</title>
+<title>楽天に5G電波追加 東名阪以外で</title>
+<title>新Xperia 世界初のレンズ搭載</title>
+<title>不適切動画巡り焼き肉店側謝罪</title>
+>>>
+
+>>> for news in soup.findAll('item'):
+...     print(news.title.string)
+...
+本RSSのURLは変更になりました。新しいRSSのURLへ移行をお願いします。
+マネックス証券 システム不具合
+COCOA巡り厚労省「業者任せ」
+Amazonプライム 2億人を突破
+米コインベース ナスダック上場
+カプコン流出 大阪府警が捜査
+楽天に5G電波追加 東名阪以外で
+新Xperia 世界初のレンズ搭載
+不適切動画巡り焼き肉店側謝罪
+>>>
+
+amazonをスクレイピングする
+
+TVゲームストア の 新着ランキング
+https://www.amazon.co.jp/gp/new-releases/videogames/637394/
+
+>>> import requests
+>>> from bs4 import BeautifulSoup
+>>> b = requests.get('https://www.amazon.co.jp/gp/new-releases/videogames/637394/')
+>>> soup = BeautifulSoup(b.text,"html.parser")
+>>> soup.find(class_='zg_itemRow').find(class_='zg_title').find('a').string
+>>> soup.title
+<title>
+²Àfð¨©¯µÄ¢Ü·I
+</title>
+>>> type(soup)
+<class 'bs4.BeautifulSoup'>
+>>> soup.find(class_='zg_itemRow').find(class_='zg_title').find('a').string
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'NoneType' object has no attribute 'find'
+>>>
+
+>>> for game in soup.findAll(class_='zg_itemRow'):
+...     print(game.find(class_='zg_rankNumber').string+game.find(class_='zg_title').find('a').string)
+...
+>>>
+
+※クラス名が変わってる？ソース見ても該当箇所判らず
+
 ■6-5 外部ライブラリモジュールを自分で作ってみる
 □モジュールの作り方
