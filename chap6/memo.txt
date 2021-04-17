@@ -442,3 +442,46 @@ AttributeError: 'NoneType' object has no attribute 'find'
 
 ■6-5 外部ライブラリモジュールを自分で作ってみる
 □モジュールの作り方
+
+実際に自分でライブラリを作り、importして使ってみる
+
+print('Happy new year!')
+C:\Users\USER\Documents\test_python_easy_sample\chap6>python happynewyear1.py
+Happy new year!
+
+>>> import happynewyear1
+Happy new year!
+>>>
+
+>>> dir()
+['__annotations__', '__builtins__', '__doc__', '__loader__', '__name__', '__package__', '__spec__', 'happynewyear1']
+>>>
+
+>>> import happynewyear2
+happynewyear2
+>>>
+
+>>> import happynewyear3
+>>>
+
+
+少し実用的なモジュールを作ってみる
+
+>>> import monthname
+>>> monthname.japanese(8)
+'葉月'
+>>>
+
+>>> monthname.japanese(15)
+'月の数字を入力して下さい'
+>>>
+
+C:\Users\USER\Documents\test_python_easy_sample\chap6>python monthname.py
+これはモジュール用のファイルです。importして使って下さい
+
+
+ライブラリの場所
+>>> import calendar
+>>> print(calendar.__file__)
+C:\Users\USER\AppData\Local\Programs\Python\Python38\lib\calendar.py
+>>>
