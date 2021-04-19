@@ -1,0 +1,19 @@
+﻿アプリケーションを作ろう
+
+■7-1 tkinterを使ったGUIプログラミング
+ToolKit INTER...pythonでGUIアプリを作る標準ライブラリ
+
+tkinter --- Tcl/Tk の Python インタフェース
+https://docs.python.org/ja/3/library/tkinter.html
+
+手順
+①プログラムからtinkerのモジュールを使ってGUIの画面を作る
+②①で作ったGUIの画面を操作して、どのような処理を行うかを伝える
+
+>>> import tkinter as tk
+>>> base = tk.Tk() // 小窓が立ち上がる
+>>> base.mainloop()
+
+■7-2 かんたんなアプリケーションを作ってみよう
+
+
