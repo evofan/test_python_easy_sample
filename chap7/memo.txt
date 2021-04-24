@@ -14,6 +14,14 @@ https://docs.python.org/ja/3/library/tkinter.html
 >>> base = tk.Tk() // 小窓が立ち上がる
 >>> base.mainloop()
 
+部品（ボタン）を画面に置く
+>>> import tkinter as tk
+>>> base = tk.Tk()
+>>> button = tk.Button(base, text='push!')
+>>> button.pack()
+>>>
+
+
 ■7-2 かんたんなアプリケーションを作ってみよう
 
 
