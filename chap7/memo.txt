@@ -37,6 +37,29 @@ https://docs.python.org/ja/3/library/tkinter.html
 >>> button2 = tk.Button(base, text='push2').pack(side=tk.LEFT)
 >>> button3 = tk.Button(base, text='push3').pack(side=tk.RIGHT)
 
+gridメソッド
+>>> import tkinter as tk
+>>> base = tk.Tk()
+>>> button1 = tk.Button(base, text='push1')
+>>> button2 = tk.Button(base, text='push2')
+>>> button3 = tk.Button(base, text='push3')
+>>> button1.grid(row=0, column=0)
+>>> button2.grid(row=1, column=1)
+>>> button3.grid(row=2, column=2)
+>>>
+
+placeメソッド
+>>> import tkinter as tk
+>>> base = tk.Tk()
+>>> button1 = tk.Button(base, text='push1')
+>>> button2 = tk.Button(base, text='push2')
+>>> button3 = tk.Button(base, text='push3')
+>>> button1.place(x=100, y=100)
+>>> button2.place(x=50, y=200)
+>>> button3.place(x=200, y=300)
+
+buttonを画面に置いて、ボタンを押した時の反応を作る
+
 
 ■7-2 かんたんなアプリケーションを作ってみよう
 
