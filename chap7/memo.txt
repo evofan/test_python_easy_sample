@@ -62,5 +62,26 @@ buttonを画面に置いて、ボタンを押した時の反応を作る
 
 
 ■7-2 かんたんなアプリケーションを作ってみよう
+qrcodeパッケージ
+https://pypi.org/project/qrcode/
+
+C:\Users\USER>pip install qrcode
+Collecting qrcode
+  Downloading https://files.pythonhosted.org/packages/42/87/4a3a77e59ab7493d64da1f69bf1c2e899a4cf81e51b2baa855e8cc8115be/qrcode-6.1-py2.py3-none-any.whl
+Requirement already satisfied: six in c:\users\user\appdata\roaming\python\python38\site-packages (from qrcode) (1.15.0)
+Requirement already satisfied: colorama; platform_system == "Windows" in c:\users\user\appdata\roaming\python\python38\site-packages (from qrcode) (0.4.4)
+Installing collected packages: qrcode
+Successfully installed qrcode-6.1
+WARNING: You are using pip version 19.2.3, however version 21.1.1 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command.
+
+>>> import qrcode
+>>> encode_text = 'http://google.com'
+>>> img = qrcode.make(encode_text)
+>>> type(img)
+<class 'qrcode.image.pil.PilImage'> ※型
+>>> img.show()
+>>>
+
 
 
