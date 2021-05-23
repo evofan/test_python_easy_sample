@@ -21,3 +21,5 @@ Use image for sample
 
 **Requests: 人間のためのHTTP**  
 [https://requests-docs-ja.readthedocs.io/en/latest/](https://requests-docs-ja.readthedocs.io/en/latest/)  
+
+<img src="https://evofan.github.io/test_python_easy_sample/chap7/pic_screenshot.jpg" width="%">  
